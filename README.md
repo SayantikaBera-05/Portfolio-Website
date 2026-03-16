@@ -3,7 +3,7 @@
 A responsive, personal portfolio website designed and developed to showcase my skills, projects, and educational background as an aspiring AI & ML Developer.
 
 ## 🚀 Live Demo
-*(Add your live hosting link here, e.g., Vercel, GitHub Pages, Netlify)*
+[*(Live Website)*](https://sayantikadev.vercel.app/)
 
 ## 🛠️ Technologies Used
 - **HTML5**: For structuring the web content.
@@ -51,4 +51,4 @@ If you'd like to get in touch or collaborate, feel free to reach out:
 - **GitHub:** [SayantikaBera-05](https://github.com/SayantikaBera-05)
 
 ---
-*Designed & Built by Sayantika Bera in collaboration with Joy Sengupta*
+*Designed & Built by Sayantika Bera*
