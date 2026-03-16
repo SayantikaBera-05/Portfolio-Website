@@ -683,6 +683,7 @@ header.scrolled {
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
+    justify-items : center;
     gap: 3rem;
 }
 
@@ -690,6 +691,8 @@ header.scrolled {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
+    text-align: center;
 }
 
 .contact-item {
