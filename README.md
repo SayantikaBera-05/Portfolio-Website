@@ -38,7 +38,7 @@ To run this project locally, follow these simple steps:
 
 2. **Navigate into the project directory:**
    ```bash
-   cd your-repo-name
+   cd Portfolio-Website
    ```
 
 3. **Open the project:**
