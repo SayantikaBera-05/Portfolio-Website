@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>Sayantika Bera | AI & ML Developer</title>
+    <meta name="description" content="Portfolio of Sayantika Bera, an aspiring AI & ML Developer.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;800;900  &display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FontAwesome Hooks -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    
+    <!-- Navigation Bar -->
+    <header id="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">Sayantika<span>.</span>Dev</a>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About Me</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link nav-btn">Get In Touch</a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container hero-content">
+                <div class="hero-text fade-in-up">
+                    <p class="greeting">Hi, I am</p>
+                    <h1 class="name">SAYANTIKA BERA</h1>
+                    <h2 class="role">AI & ML <span class="highlight">Developer</span></h2>
+                    <p class="summary">
+                        A Bachelor of Technology student in Artificial Intelligence & Machine Learning (AIML) with a strong interest in AI technologies and software development. As an aspiring developer, I enjoy learning new technologies, exploring intelligent systems, and building skills to create innovative and meaningful digital solutions.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Get in Touch <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#projects" class="btn btn-secondary">View Work</a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper fade-in">
+                    <div class="glow-ring"></div>
+                    <!-- Using a striking placeholder if the actual user image is not ready, we'll try to use a generated one or a professional abstract default -->
+                    <img src="images/avatar.jpeg" alt="Sayantika Bera" class="hero-image" id="profile-img" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600'">
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about"><i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">ABOUT <span>ME</span></h2>
+                    <div class="line"></div>
+                </div>
+                <div class="about-content fade-in-up">
+                    <div class="about-card glass-panel">
+                        <i class="fa-solid fa-robot about-icon"></i>
+                        <p>
+                            I am a curious and motivated B.Tech student specializing in Artificial Intelligence & Machine Learning. I enjoy exploring how technology and intelligent systems can solve real-world problems. With a growing interest in development and innovation, I am continuously learning, improving my technical skills, and working towards becoming a creative and impactful developer in the tech world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="education section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title"><span>EDUCATION</span></h2>
+                    <div class="line"></div>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item fade-in-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-panel">
+                            <span class="timeline-date">2024 - Present</span>
+                            <h3 class="timeline-title">Bachelor of Technology (B.Tech)</h3>
+                            <h4 class="timeline-subtitle">Artificial Intelligence & Machine Learning</h4>
+                            <p class="timeline-school">Narula Institute of Technology, Kolkata</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item fade-in-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-panel">
+                            <h3 class="timeline-title">Diploma in Information Technology Applications</h3>
+                            <p class="timeline-school">Youth Computer Training Centre (Govt. of West Bengal)</p>
+                            <p class="timeline-result"><span class="highlight">Result:</span> Pass (Grade A)</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-in-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-panel">
+                            <h3 class="timeline-title">Higher Secondary Examination - PCMB</h3>
+                            <p class="timeline-school">Bally Banga Sishu Balika Vidyalaya</p>
+                            <p class="timeline-result"><span class="highlight">Percentage:</span> 81.4%</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item fade-in-left">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass-panel">
+                            <h3 class="timeline-title">Secondary Examination</h3>
+                            <p class="timeline-school">Bally Banga Sishu Balika Vidyalaya</p>
+                            <p class="timeline-result"><span class="highlight">Percentage:</span> 85.71%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">TECHNICAL <span>SKILLS</span></h2>
+                    <div class="line"></div>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-card glass-panel fade-in-up">
+                        <i class="fa-brands fa-python skill-icon"></i>
+                        <h3>Python</h3>
+                        <p>Programming Fundamentals (Beginner)</p>
+                        <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
+                    </div>
+                    
+                    <div class="skill-card glass-panel fade-in-up" style="transition-delay: 0.1s;">
+                        <i class="fa-solid fa-brain skill-icon"></i>
+                        <h3>Machine Learning</h3>
+                        <p>Fundamentals (Currently Learning)</p>
+                        <div class="progress-bar"><div class="progress" style="width: 60%;"></div></div>
+                    </div>
+                    
+                    <div class="skill-card glass-panel fade-in-up" style="transition-delay: 0.2s;">
+                        <i class="fa-solid fa-database skill-icon"></i>
+                        <h3>Pandas & Numpy</h3>
+                        <p>Data Analysis (Beginner)</p>
+                        <div class="progress-bar"><div class="progress" style="width: 65%;"></div></div>
+                    </div>
+
+                    <div class="skill-card glass-panel fade-in-up" style="transition-delay: 0.3s;">
+                        <i class="fa-solid fa-code skill-icon"></i>
+                        <h3>Data Structures</h3>
+                        <p>Academic Knowledge</p>
+                        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                    </div>
+
+                    <div class="skill-card glass-panel fade-in-up" style="transition-delay: 0.4s;">
+                        <div class="skill-icons-group">
+                            <i class="fa-brands fa-html5 skill-icon"></i>
+                            <i class="fa-brands fa-css3-alt skill-icon"></i>
+                        </div>
+                        <h3>HTML & CSS</h3>
+                        <p>Front-End Development</p>
+                        <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title"><span>PROJECTS</span></h2>
+                    <div class="line"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    <div class="project-card glass-panel fade-in-up">
+                        <div class="project-content">
+                            <h3 class="project-title">Responsive Web Page Design (HTML & CSS)</h3>
+                            <p class="project-desc">
+                                Designed and developed a responsive website using HTML and CSS. Implemented media queries to create mobile-friendly layouts and improve user experience. This project helped me strengthen my understanding of basic UI/UX design and responsive web development.
+                            </p>
+                            <div class="project-links">
+                                <a href="https://github.com/SayantikaBera-05/Responsive-edtech-landing-page" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-brands fa-github"></i> GitHub</a>
+                                <a href="https://responsive-edtech-landing-page.vercel.app/" target="_blank" class="btn btn-secondary btn-sm">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card glass-panel fade-in-up" style="transition-delay: 0.1s;">
+                        <div class="project-content">
+                            <h3 class="project-title">Personal Portfolio Website</h3>
+                            <p class="project-desc">
+                                A responsive, modern personal portfolio website to showcase my education, technical skills, and projects as an aspiring AI & ML Developer. Features glassmorphism UI design, smooth scroll animations, and interactive elements using HTML, CSS, and Vanilla JavaScript. Collab with Joy Sengupta.
+                            </p>
+                            <div class="project-links">
+                                <a href="#" target="_blank" class="btn btn-secondary btn-sm"><i class="fa-brands fa-github"></i> GitHub</a>
+                                <a href="#home" class="btn btn-secondary btn-sm">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Internship Experience -->
+        <section id="experience" class="experience section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">INTERNSHIP <span>EXPERIENCE</span></h2>
+                    <div class="line"></div>
+                </div>
+                
+                <div class="experience-card glass-panel fade-in-up">
+                    <div class="exp-header">
+                        <div class="exp-title-group">
+                            <h3 class="exp-role">AI-ML Virtual Internship</h3>
+                            <span class="exp-badge">Ongoing</span>
+                        </div>
+                        <h4 class="exp-company"><i class="fa-brands fa-google"></i> EduSkills – Google Developer Program</h4>
+                    </div>
+                    <p class="exp-desc">
+                        Currently pursuing an AI-ML virtual internship, gaining practical knowledge of Artificial Intelligence and Machine Learning concepts and tools.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Languages -->
+        <section id="languages" class="languages section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title"><span>LANGUAGES</span></h2>
+                    <div class="line"></div>
+                </div>
+                
+                <div class="languages-wrap fade-in-up">
+                    <div class="lang-tag">ENGLISH</div>
+                    <div class="lang-tag">HINDI</div>
+                    <div class="lang-tag">BENGALI</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <h2 class="section-title">GET IN <span>TOUCH</span></h2>
+                    <div class="line"></div>
+                </div>
+                
+                <div class="contact-grid fade-in-up">
+                    <div class="contact-info glass-panel">
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="contact-details">
+                                <h3>Address</h3>
+                                <p>SASTITALA, SAPUIPARA, BALLY, HOWRAH, WEST BENGAL-711227</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <a href="mailto:sayantika.bera.ciphernauts@gmail.com">sayantika.bera.ciphernauts@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+                            <div class="contact-details">
+                                <h3>Phone</h3>
+                                <a href="tel:+919007528033">+91 9007528033</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form id="contactForm" class="contact-form glass-panel">
+                        <h3>Send a Message</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">Sayantika<span>.</span>Dev</div>
+            <p class="copyright">&copy; <span id="year"></span> Sayantika Bera. All rights reserved.</p>
+            <div class="social-links">
+                <a href="www.linkedin.com/in/sayantika-bera-8b949731b" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/SayantikaBera-05/Responsive-edtech-landing-page" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/bera_sayantika3" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+</html>
