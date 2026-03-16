@@ -681,9 +681,10 @@ header.scrolled {
 
 /* --- Contact Section --- */
 .contact-grid {
-    display: grid;
+    display: flex;
     grid-template-columns: 1fr 1.5fr;
-    justify-items : center;
+    justify-content: center;
+    align-items: center;
     gap: 3rem;
 }
 
