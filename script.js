@@ -108,25 +108,106 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Contact Form Handling ---
     const contactForm = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const submitSpinner = document.getElementById('submitSpinner');
+    const btnText = submitBtn ? submitBtn.querySelector('.btn-text') : null;
+    const formStatus = document.getElementById('formStatus');
+
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', async function(e) {
             e.preventDefault(); // Prevent page reload
             
+            // Clear previous errors
+            document.querySelectorAll('.error-msg').forEach(el => el.classList.remove('visible'));
+            document.querySelectorAll('.form-input').forEach(el => el.classList.remove('error'));
+            formStatus.className = 'form-status hidden';
+
             // Get input values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const subjectInput = document.getElementById('subject');
+            const messageInput = document.getElementById('message');
+            const botcheck = document.querySelector('input[name="botcheck"]').checked;
             
-            // Construct email payload
-            const targetEmail = 'sayantika.bera.ciphernauts@gmail.com';
-            const subject = encodeURIComponent('New Message from Portfolio Website');
-            const body = encodeURIComponent(`You have received a new message from your portfolio website.\n\nFrom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-            
-            // Open the default mail client (Gmail, Outlook, Mail app, etc.)
-            window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
-            
-            // Optional: reset the form after clicking
-            contactForm.reset();
+            let isValid = true;
+
+            // Validate Name
+            if (nameInput.value.trim().length < 2) {
+                document.getElementById('nameError').textContent = 'Name must be at least 2 characters.';
+                document.getElementById('nameError').classList.add('visible');
+                nameInput.classList.add('error');
+                isValid = false;
+            }
+
+            // Validate Email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value.trim())) {
+                document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+                document.getElementById('emailError').classList.add('visible');
+                emailInput.classList.add('error');
+                isValid = false;
+            }
+
+            // Validate Subject
+            if (subjectInput.value.trim() === '') {
+                document.getElementById('subjectError').textContent = 'Subject is required.';
+                document.getElementById('subjectError').classList.add('visible');
+                subjectInput.classList.add('error');
+                isValid = false;
+            }
+
+            // Validate Message
+            if (messageInput.value.trim().length < 10) {
+                document.getElementById('messageError').textContent = 'Message must be at least 10 characters.';
+                document.getElementById('messageError').classList.add('visible');
+                messageInput.classList.add('error');
+                isValid = false;
+            }
+
+            if (!isValid) return;
+
+            // Update UI to Submitting State
+            submitBtn.disabled = true;
+            submitSpinner.classList.remove('hidden');
+            btnText.style.opacity = '0.5';
+
+            try {
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        access_key: '06eef67d-34c0-4c20-aae4-03eaba19e888',
+                        name: nameInput.value.trim(),
+                        email: emailInput.value.trim(),
+                        subject: subjectInput.value.trim(),
+                        message: messageInput.value.trim(),
+                        botcheck: botcheck
+                    })
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    // Success state
+                    contactForm.reset();
+                    formStatus.textContent = 'Message sent successfully!';
+                    formStatus.className = 'form-status success visible';
+                } else {
+                    // Error state from server
+                    formStatus.textContent = result.message || 'Failed to send message. Please try again.';
+                    formStatus.className = 'form-status error visible';
+                }
+            } catch (error) {
+                // Network error
+                formStatus.textContent = 'A network error occurred. Please try again.';
+                formStatus.className = 'form-status error visible';
+                console.error('Form submission error:', error);
+            } finally {
+                // Revert UI from Submitting State
+                submitBtn.disabled = false;
+                submitSpinner.classList.add('hidden');
+                btnText.style.opacity = '1';
+            }
         });
     }
 });
