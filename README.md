@@ -46,7 +46,7 @@ To run this project locally, follow these simple steps:
 
 ## 📫 Contact
 If you'd like to get in touch or collaborate, feel free to reach out:
-- **Email:** [sayantika.bera.ciphernauts@gmail.com](mailto:sayantika.bera.ciphernauts@gmail.com)
+- **Email:** [berasayantika825@gmail.com](mailto:berasayantika825@gmail.com)
 - **LinkedIn:** [Sayantika Bera](https://www.linkedin.com/in/sayantika-bera-8b949731b)
 - **GitHub:** [SayantikaBera-05](https://github.com/SayantikaBera-05)
 
